@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Showcase Glenn Nijenhuis</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Showcase</a>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="text-center mb-5 bg-secondary">
+      <img
+        src="assets/person-pasfoto.png"
+        alt="Profile Picture of Glenn Nijenhuis"
+        class="rounded-circle border border-dark my-3"
+        style="width: 150px; height: 150px; object-fit: cover"
+      />
+      <h1 class="display-4 pb-3 text-white">Glenn Nijenhuis</h1>
+
+      <button
+        class="btn btn-primary mb-3"
+        data-bs-toggle="modal"
+        data-bs-target="#contactModal"
+      >
+        Neem contact met mij op!
+      </button>
+    </header>
+
+    <!-- Contact Modal -->
+    <div
+      class="modal fade"
+      id="contactModal"
+      tabindex="-1"
+      aria-labelledby="contactModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="contactModalLabel">Neem contact met mij op!</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="contactForm">
+              <div class="mb-3">
+                <label for="firstName" class="form-label">Voornaam</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="firstName"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="lastName" class="form-label">Achternaam</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="lastName"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" required />
+              </div>
+              <div class="mb-3">
+                <label for="phone" class="form-label">Telefoonnummer</label>
+                <input type="tel" class="form-control" id="phone" required />
+              </div>
+              <div class="mb-3">
+                <label for="subject" class="form-label">Onderwerp</label>
+                <input type="text" class="form-control" id="subject" maxlength="200" required />
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Bericht</label>
+                <textarea
+                  class="form-control"
+                  id="message"
+                  rows="3"
+                  required
+                  maxlength="600"
+                ></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="captcha" class="form-label">Los de CAPTCHA op</label>
+                <div id="captchaQuestion" class="form-control" style="border: none; background: #f8f9fa;"></div>
+                <input type="text" class="form-control mt-2" id="captcha" name="captcha" required placeholder="Enter the result">
+                <input type="hidden" id="captchaAnswer" name="captchaAnswer">
+            </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="submit" id="submitBtn" class="btn btn-primary" disabled form="contactForm">
+              Send
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-5">
+      <!-- Main Profile Content -->
+      <main>
+        <!-- Profile Section -->
+        <section class="mb-4">
+          <h2 class="text-primary">Introductie</h2>
+          <hr />
+          <p class="lead">Student aan Windesheim, software engineering.</p>
+        </section>
+
+        <!-- Education Section -->
+        <section class="mb-4">
+          <h2 class="text-primary">Opleidingen</h2>
+          <hr />
+          <div class="mb-3">
+            <h3>HBO-ICT</h3>
+            <p class="text-muted">2019 - heden</p>
+            <p>Hogeschool Windesheim, Zwolle</p>
+          </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="mb-4">
+          <h2 class="text-primary">Skills</h2>
+          <hr />
+          <ul class="list-unstyled">
+            <li>
+              <h3>.NET</h3>
+            </li>
+            <li>
+              <h3>React</h3>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Work Experience Section -->
+        <section class="mb-4">
+          <h2 class="text-primary">Werkervaring</h2>
+          <hr />
+          <div class="mb-3">
+            <h3>Plus van den Hoven, Heerde</h3>
+          </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="mb-4">
+          <h2 class="text-primary">Contact</h2>
+          <hr />
+          <div>
+            <h3>
+              Email:
+              <a href="mailto:s1145509@student.windesheim.nl"
+                >s1145509@student.windesheim.nl</a
+              >
+            </h3>
+            <h3>Tel: <a href="tel:+316362271798">06362271798</a></h3>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+      <p>&copy; 2024 BrandName. All rights reserved.</p>
+    </footer>
+
+    <!-- GDPR Modal -->
+    <div
+      class="modal fade"
+      id="gdprModal"
+      tabindex="-1"
+      aria-labelledby="gdprModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="gdprModalLabel">
+              Deze website gebruikt cookies.
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>
+              We gebruiken cookies om content te personaliseren, voor social
+              media en het analyseren van verkeer op de website, advertenties.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" id="declineCookies">
+              Decline
+            </button>
+            <button type="button" class="btn btn-primary" id="acceptCookies">
+              Accept
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>
